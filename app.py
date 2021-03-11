@@ -9,7 +9,7 @@ def home():
     fulfillmentText = ''
     query_result = req.get('queryResult')
     city = query_result.get('parameters').get('city')
-    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&APPID=61139a849aaf8499efd62e07e73fede1'
+    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&APPID=APPID'
     response = requests.get(url).json()
     data = response.get('weather')
     fulfillmentText = data[0]['description']
